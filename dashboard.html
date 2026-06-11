@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freight App</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0B0F1A;
+  color: white;
+}
+
+/* APP */
+.app {
+  max-width: 420px;
+  margin: auto;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #0B0F1A;
+}
+
+/* HEADER */
+.header {
+  padding: 18px;
+  background: linear-gradient(135deg, #0F172A, #1E3A8A);
+}
+
+/* PAGES */
+.page {
+  display: none;
+  padding: 15px;
+}
+
+/* CARD */
+.card {
+  background: #121A2A;
+  padding: 15px;
+  border-radius: 14px;
+  margin-top: 12px;
+  border: 1px solid #1E293B;
+}
+
+/* ACCENT TEXT */
+.accent {
+  color: #38BDF8;
+}
+
+/* BADGE */
+.badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  background: #1E3A8A;
+}
+
+/* NAV */
+.nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background: #0F172A;
+  border-top: 1px solid #1E293B;
+}
+
+.nav div {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  font-size: 11px;
+  color: #94A3B8;
+}
+
+/* ACTIVE ICON */
+.icon {
+  font-size: 20px;
+  display: block;
+  color: #38BDF8;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #2563EB;
+  color: white;
+}
+
+/* INPUT */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #0B1220;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- HOME -->
+<div id="home" class="page" style="display:block;">
+
+  <div class="header">
+    <h2>Freight Dashboard</h2>
+    <p class="accent">Fast • Real-time • Tracking System</p>
+  </div>
+
+  <div class="card">
+    📦 Active Shipments <br>
+    <h2 class="accent">3</h2>
+  </div>
+
+  <div class="card">
+    ✅ Delivered <br>
+    <h2 class="accent">12</h2>
+  </div>
+
+</div>
+
+<!-- PACKAGES -->
+<div id="packages" class="page">
+
+  <div class="card">
+    <b>📦 Shipments</b>
+  </div>
+
+  <div class="card">
+    <b>JMD839201</b><br>
+    Miami → Jamaica <br>
+    <span class="badge">IN TRANSIT</span>
+  </div>
+
+  <div class="card">
+    <b>JMD112233</b><br>
+    NY → Kingston <br>
+    <span class="badge">DELIVERED</span>
+  </div>
+
+</div>
+
+<!-- MAILBOX -->
+<div id="mailbox" class="page">
+
+  <div class="card">
+    <b class="accent">✈️ Air Freight</b><br><br>
+
+    Name: John Doe<br>
+    5401 NW 102nd Ave<br>
+    Ste-113 GSS000<br>
+    Sunrise, FL 33351<br>
+    USA<br><br>
+
+    <button>Copy Address</button>
+  </div>
+
+  <div class="card">
+    <b class="accent">🚢 Sea Freight</b><br><br>
+
+    Name: John Doe<br>
+    55 Port Terminal<br>
+    NY 10038 USA<br><br>
+
+    <button>Copy Address</button>
+  </div>
+
+</div>
+
+<!-- PROFILE -->
+<div id="profile" class="page">
+
+  <div class="card">
+    <b>👤 Profile</b>
+
+    <input value="John Doe">
+    <input value="john@email.com">
+    <input value="TRN: 123-456-789" disabled>
+
+    <br><br>
+    <button>Save Changes</button>
+  </div>
+
+</div>
+
+<!-- NAV -->
+<div class="nav">
+
+  <div onclick="show('home')">
+    <span class="icon">🏠</span>
+    Home
+  </div>
+
+  <div onclick="show('packages')">
+    <span class="icon">📦</span>
+    Packages
+  </div>
+
+  <div onclick="show('mailbox')">
+    <span class="icon">📬</span>
+    Mailbox
+  </div>
+
+  <div onclick="show('profile')">
+    <span class="icon">👤</span>
+    Profile
+  </div>
+
+</div>
+
+</div>
+
+<script>
+function show(page){
+  document.querySelectorAll('.page').forEach(p=>p.style.display='none');
+  document.getElementById(page).style.display='block';
+}
+</script>
+
+</body>
+</html>
