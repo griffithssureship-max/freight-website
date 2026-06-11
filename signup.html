@@ -1,38 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sign Up - Griffiths SureShip</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up - Griffiths SureShip</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f8fafc;
+}
+
+.header{
+    background:linear-gradient(135deg,#0ea5e9,#2563eb,#dc2626);
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+.form-container{
+    max-width:450px;
+    margin:20px auto;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+h2,h3{
+    margin-top:0;
+}
+
+input,select{
+    width:100%;
+    padding:12px;
+    margin-bottom:12px;
+    border:1px solid #cbd5e1;
+    border-radius:8px;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#dc2626;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#b91c1c;
+}
+
+.login-link{
+    text-align:center;
+    margin-top:15px;
+}
+
+.login-link a{
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
 </head>
-<body style="font-family:Arial;background:#f8fafc;padding:20px;">
+<body>
+<div class="header">
+    <h2>🚚 Griffiths SureShip</h2>
+    <p>Create Your Shipping Account</p>
+</div>
+<div class="form-container">
+<h3>Sign Up</h3>
+<input type="text" placeholder="Full Name">
+<input type="email" placeholder="Email Address">
 
-<h2 style="text-align:center;color:#0ea5e9;">Griffiths SureShip</h2>
-
-<div style="background:white;padding:20px;border-radius:12px;max-width:400px;margin:auto;">
-  <h3>Create Account</h3>
-
-  <input type="text" placeholder="Full Name"
-    style="width:100%;padding:12px;margin-bottom:10px;">
-
-  <input type="email" placeholder="Email"
-    style="width:100%;padding:12px;margin-bottom:10px;">
-
-  <input type="tel" placeholder="Phone Number"
-    style="width:100%;padding:12px;margin-bottom:10px;">
-
-  <input type="password" placeholder="Password"
-    style="width:100%;padding:12px;margin-bottom:10px;">
-
-  <button
-    style="width:100%;padding:12px;background:#14b8a6;color:white;border:none;border-radius:8px;">
-    Create Account
-  </button>
-
-  <p style="text-align:center;">
+<input type="text" placeholder="TRN">
+<input type="tel" placeholder="Contact Number">
+<select>
+    <option value="">Select Pickup Location</option>
+    <option>Montego Bay Pickup</option>
+    <option>Lucea Pickup</option>
+    <option>Knutsford Express Pickup</option>
+</select>
+<input type="password" placeholder="Password">
+<div class="login-link">
     Already have an account?
     <a href="login.html">Login</a>
-  </p>
 </div>
-
+</div>
 </body>
 </html>
+
+
